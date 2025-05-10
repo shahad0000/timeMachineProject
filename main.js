@@ -1,153 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
   let signInLink = document.getElementById("signIn-link");
   let profileLink = document.getElementById("profile");
-  const searchBtn = document.querySelector(".searchBtn");
-  let seachInput = document.querySelector(".searchInput");
-
-  // Greece comments
-  let greeceComments = [
-    {
-      username: "Pre-existing user",
-      time: "today",
-      comment: "this is the first comment",
-    },
-    {
-      username: "someone",
-      time: "yesterday",
-      comment: "this is the second comment",
-    },
-  ];
-  // Greece timeline
-  let greeceTimeline = [
-    {
-      year: 1200,
-      title: "Trojan War",
-      description:
-        "A legendary conflict between the Greeks and Trojans, forming the basis of Homer's *The Iliad*.",
-      img: "imgs/trojanWar.png",
-    },
-    {
-      year: 1500,
-      title: "Rise of the Olympian Gods",
-      description:
-        "Zeus and his siblings overthrow the Titans and establish their rule from Mount Olympus.",
-      img: "imgs/riseOfOlympians.png",
-    },
-    {
-      year: 1280,
-      title: "Birth of Heracles",
-      description:
-        "Heracles (Hercules), a divine hero and son of Zeus, is born and later performs the famous Twelve Labors.",
-      img: "imgs/heracles.png",
-    },
-    {
-      year: 1180,
-      title: "Odysseus' Journey",
-      description:
-        "The Odyssey tells the tale of Odysseus' long journey home after the fall of Troy.",
-      img: "imgs/odysseus.png",
-    },
-  ];
-  // Egypt comments
-  let egyptComments = [
-    {
-      username: "Pre-existing user",
-      time: "today",
-      comment: "this is the first comment",
-    },
-    {
-      username: "someone",
-      time: "yesterday",
-      comment: "this is the second comment",
-    },
-  ];
-  // Egypt timeline
-  egyptTimeline = [
-    {
-      year: 3000,
-      title: "Creation of the World by Atum",
-      description:
-        "Atum emerges from the primordial waters of Nun and creates the first gods, Shu and Tefnut, beginning the divine lineage.",
-      img: "imgs/atum.png",
-    },
-    {
-      year: 2500,
-      title: "Osiris Becomes Lord of the Underworld",
-      description:
-        "After being murdered by Set, Osiris is resurrected by Isis and rules over the afterlife, judging the souls of the dead.",
-      img: "imgs/osiris.png",
-    },
-    {
-      year: 2400,
-      title: "Horus Defeats Set",
-      description:
-        "Horus avenges his father Osiris by defeating Set and restoring balance to Egypt, becoming the rightful ruler.",
-      img: "imgs/horus.png",
-    },
-    {
-      year: 2300,
-      title: "Weighing of the Heart Ritual",
-      description:
-        "The ceremony to determine a soul’s fate in the afterlife is established—hearts are weighed against the feather of Ma'at.",
-      img: "imgs/maat.png",
-    },
-  ];
-  // Norse comments
-  let norseComments = [
-    {
-      username: "Pre-existing user",
-      time: "today",
-      comment: "this is the first comment",
-    },
-    {
-      username: "someone",
-      time: "yesterday",
-      comment: "this is the second comment",
-    },
-  ];
-  // Norse timeline
-  let norseTimeline = [
-    {
-      year: 800,
-      title: "The Binding of Fenrir",
-      description:
-        "The gods bind Fenrir, the monstrous wolf, using a magical ribbon called Gleipnir to prevent him from causing chaos until Ragnarok.",
-      img: "imgs/fenrir.png",
-    },
-    {
-      year: 900,
-      title: "The Death of Baldur",
-      description:
-        "Baldur, the beloved god, is killed by his blind brother Hodr, manipulated by Loki—signaling the beginning of the end for the gods.",
-      img: "imgs/baldur.png",
-    },
-    {
-      year: 1000,
-      title: "Loki's Punishment",
-      description:
-        "Loki is bound by the gods with the entrails of his son and a serpent dripping venom on him for his role in Baldur’s death.",
-      img: "imgs/loki.png",
-    },
-    {
-      year: 1200,
-      title: "Ragnarok Begins",
-      description:
-        "The final battle between the gods and giants unfolds—bringing about the death of Odin, Thor, Loki, and the rebirth of the world.",
-      img: "imgs/ragnarok.png",
-    },
-  ];
-
-  // empliment a search feature
-  searchBtn.onclick = (e) => {
-    e.preventDefault();
-    console.log(seachInput.value);
-  };
 
   if (window.location.pathname.includes("index.html")) {
     const greeceMyth = document.getElementById("greece");
     const egyptMyth = document.getElementById("egypt");
     const norseMyth = document.getElementById("norse");
 
+    // Greece comments
+    let greeceComments = [
+      {
+        username: "Pre-existing user",
+        time: "today",
+        comment: "this is the first comment",
+      },
+      {
+        username: "someone",
+        time: "yesterday",
+        comment: "this is the second comment",
+      },
+    ];
+    // Greece timeline
+    let greeceTimeline = [
+      {
+        year: 1200,
+        title: "Trojan War",
+        description:
+          "A legendary conflict between the Greeks and Trojans, forming the basis of Homer's *The Iliad*.",
+        img: "imgs/trojanWar.png",
+      },
+      {
+        year: 1500,
+        title: "Rise of the Olympian Gods",
+        description:
+          "Zeus and his siblings overthrow the Titans and establish their rule from Mount Olympus.",
+        img: "imgs/riseOfOlympians.png",
+      },
+      {
+        year: 1280,
+        title: "Birth of Heracles",
+        description:
+          "Heracles (Hercules), a divine hero and son of Zeus, is born and later performs the famous Twelve Labors.",
+        img: "imgs/heracles.png",
+      },
+      {
+        year: 1180,
+        title: "Odysseus' Journey",
+        description:
+          "The Odyssey tells the tale of Odysseus' long journey home after the fall of Troy.",
+        img: "imgs/odysseus.png",
+      },
+    ];
     greeceMyth.onclick = () => {
       const mythologyData = {
         img: "imgs/greeceHeroBg.png",
@@ -159,6 +62,52 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("mythologyData", JSON.stringify(mythologyData));
       window.location.href = "myths.html";
     };
+
+    // Norse comments
+    let norseComments = [
+        {
+          username: "Pre-existing user",
+          time: "today",
+          comment: "this is the first comment",
+        },
+        {
+          username: "someone",
+          time: "yesterday",
+          comment: "this is the second comment",
+        },
+      ];
+    // Norse timeline
+    let norseTimeline = [
+        {
+          year: 800,
+          title: "The Binding of Fenrir",
+          description:
+            "The gods bind Fenrir, the monstrous wolf, using a magical ribbon called Gleipnir to prevent him from causing chaos until Ragnarok.",
+          img: "imgs/fenrir.png",
+        },
+        {
+          year: 900,
+          title: "The Death of Baldur",
+          description:
+            "Baldur, the beloved god, is killed by his blind brother Hodr, manipulated by Loki—signaling the beginning of the end for the gods.",
+          img: "imgs/baldur.png",
+        },
+        {
+          year: 1000,
+          title: "Loki's Punishment",
+          description:
+            "Loki is bound by the gods with the entrails of his son and a serpent dripping venom on him for his role in Baldur’s death.",
+          img: "imgs/loki.png",
+        },
+        {
+          year: 1200,
+          title: "Ragnarok Begins",
+          description:
+            "The final battle between the gods and giants unfolds—bringing about the death of Odin, Thor, Loki, and the rebirth of the world.",
+          img: "imgs/ragnarok.png",
+        },
+      ]
+      
 
     norseMyth.onclick = () => {
       const mythologyData = {
@@ -172,6 +121,52 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "myths.html";
     };
 
+
+    // Egypt comments
+    let egyptComments = [
+        {
+          username: "Pre-existing user",
+          time: "today",
+          comment: "this is the first comment",
+        },
+        {
+          username: "someone",
+          time: "yesterday",
+          comment: "this is the second comment",
+        },
+      ];
+    // Egypt timeline 
+    egyptTimeline = [
+        {
+          year: 3000,
+          title: "Creation of the World by Atum",
+          description:
+            "Atum emerges from the primordial waters of Nun and creates the first gods, Shu and Tefnut, beginning the divine lineage.",
+          img: "imgs/atum.png",
+        },
+        {
+          year: 2500,
+          title: "Osiris Becomes Lord of the Underworld",
+          description:
+            "After being murdered by Set, Osiris is resurrected by Isis and rules over the afterlife, judging the souls of the dead.",
+          img: "imgs/osiris.png",
+        },
+        {
+          year: 2400,
+          title: "Horus Defeats Set",
+          description:
+            "Horus avenges his father Osiris by defeating Set and restoring balance to Egypt, becoming the rightful ruler.",
+          img: "imgs/horus.png",
+        },
+        {
+          year: 2300,
+          title: "Weighing of the Heart Ritual",
+          description:
+            "The ceremony to determine a soul’s fate in the afterlife is established—hearts are weighed against the feather of Ma'at.",
+          img: "imgs/maat.png",
+        },
+      ]
+      
     egyptMyth.onclick = () => {
       const mythologyData = {
         img: "imgs/egyptHeroBg.png",
@@ -183,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("mythologyData", JSON.stringify(mythologyData));
       window.location.href = "myths.html";
     };
-  }
+  };
 
   if (window.location.pathname.includes("myths.html")) {
     const mythologyData = JSON.parse(localStorage.getItem("mythologyData"));
@@ -192,11 +187,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let addComBtn = document.getElementById("add-com-btn");
     let addComPart = document.getElementById("add-com-part");
 
+
     // Check if user is logged in the myth page
     if (!localStorage.getItem("loggedIn")) {
-      addComPart.style.display = "none";
-      addEventMdl.style.display = "none";
-    }
+        addComPart.style.display = "none";
+        addEventMdl.style.display = "none";
+    };
 
     // Render comment
     renderComment = () => {
@@ -374,4 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
     profileLink.innerText = "Sign in";
     profileLink.href = "signIn.html";
   }
+
+
+
 });
