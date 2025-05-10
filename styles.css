@@ -1,0 +1,311 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(245, 245, 245);
+}
+.navbar {
+  z-index: 2;
+  background-color: rgba(135, 135, 135, 0.405);
+  backdrop-filter: blur(11px);
+  position: fixed;
+}
+
+
+
+.hero-section {
+  background: linear-gradient(rgba(5, 21, 66, 0.304), rgba(5, 21, 66, 0.304)),
+    url("imgs/hadesBg.png") center/cover;
+  text-align: center;
+  height: 60vh;
+}
+
+/* Extra small devices */
+@media only screen and (min-width: 300px) {
+  .hero-section h1 {
+    font-size: 1.9rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .culture {
+    height: 30vh;
+  }
+  .culture .culture-name {
+    font-size: 1.4rem;
+    bottom: 5rem;
+  }
+  .culture .culture-desc {
+    font-size: 0.7rem;
+    bottom: 5rem;
+  }
+  #myth-name {
+    top: 23rem;
+    font-size: 3rem;
+  }
+  #myth-desc {
+    top: 23rem;
+    font-size: 1.7rem;
+  }
+}
+
+/* small devices*/
+@media only screen and (min-width: 600px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section p {
+    font-size: 1.7rem;
+  }
+  .culture {
+    height: 30vh;
+  }
+  .culture .culture-name {
+    font-size: 1.8rem;
+    bottom: 7rem;
+  }
+  .culture .culture-desc {
+    font-size: 1rem;
+    bottom: 7rem;
+  }
+  #myth-name {
+    top: 22rem;
+    font-size: 5rem;
+  }
+  #myth-desc {
+    top: 22rem;
+    font-size: 3rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  .hero-section p {
+    font-size: 2rem;
+  }
+  .culture {
+    height: 35vh;
+  }
+  .culture .culture-name {
+    font-size: 2.4rem;
+    bottom: 9rem;
+  }
+  .culture .culture-desc {
+    font-size: 1.5rem;
+    bottom: 9rem;
+  }
+  #myth-name {
+    top: 16rem;
+    font-size: 5rem;
+  }
+  #myth-desc {
+    top: 16rem;
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1300px) {
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+  .hero-section p {
+    font-size: 2rem;
+  }
+  .culture {
+    height: 65vh;
+  }
+  .culture .culture-name {
+    font-size: 3.4rem;
+    bottom: 12rem;
+  }
+  .culture .culture-desc {
+    font-size: 1.6rem;
+    bottom: 12rem;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .culture {
+    height: 80vh;
+  }
+  .culture .culture-name {
+    font-size: 6rem;
+    bottom: 19rem;
+  }
+  .culture .culture-desc {
+    font-size: 2rem;
+    bottom: 19rem;
+  }
+}
+
+.culture {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.culture img {
+  display: block;
+  transition: all linear 0.25s;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.culture .culture-name {
+  position: relative;
+  color: #fff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  transition: all linear 0.25s;
+}
+
+.culture .culture-desc {
+  position: relative;
+  color: #fff;
+  transition: all linear 0.25s;
+}
+
+.culture:hover img {
+  filter: grayscale(100%);
+}
+
+.culture:hover .profile-name {
+  bottom: 80px;
+}
+
+.culture:hover .profile-username {
+  bottom: 60px;
+}
+*/
+
+
+
+
+/*---------------- Sign in CSS --------------------*/
+
+.sign-in-sec {
+  background: linear-gradient(rgba(5, 21, 66, 0.304), rgba(5, 21, 66, 0.304)),
+    url("imgs/WorldOldMap.png") center/cover no-repeat;
+  text-align: center;
+  text-align: left;
+}
+.sign-in-form {
+  background-color: rgba(24, 25, 27, 0.804);
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2 {
+  position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #26c6da;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-2 {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-2::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -11px;
+  background-color: #26c6da;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left-2 {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+/* Place the container to the right */
+.right-2 {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-2::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-2::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right-2::after {
+  left: -14px;
+}
+
+@media screen and (max-width: 600px) {
+  .main-timeline-2::after {
+    left: 31px;
+  }
+
+  .timeline-2 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-2::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left-2::after,
+  .right-2::after {
+    left: 18px;
+  }
+
+  .left-2::before {
+    right: auto;
+  }
+
+  .right-2 {
+    left: 0%;
+  }
+}
+
+.gradient-custom {
+  background-color: rgba(60, 4, 17, 0.843);
+}
