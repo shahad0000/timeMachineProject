@@ -1,25 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   let signInLink = document.getElementById("signIn-link");
   let profileLink = document.getElementById("profile");
-
-  if (window.location.pathname.includes("index.html")) {
-    const greeceMyth = document.getElementById("greece");
-    const egyptMyth = document.getElementById("egypt");
-    const norseMyth = document.getElementById("norse");
-
-    // Greece comments
-    let greeceComments = [
-      {
-        username: "Pre-existing user",
-        time: "today",
-        comment: "this is the first comment",
-      },
-      {
-        username: "someone",
-        time: "yesterday",
-        comment: "this is the second comment",
-      },
-    ];
     // Greece timeline
     let greeceTimeline = [
       {
@@ -51,6 +32,25 @@ document.addEventListener("DOMContentLoaded", () => {
         img: "imgs/odysseus.png",
       },
     ];
+  if (window.location.pathname.includes("index.html")) {
+    const greeceMyth = document.getElementById("greece");
+    const egyptMyth = document.getElementById("egypt");
+    const norseMyth = document.getElementById("norse");
+    
+    // Greece comments
+    let greeceComments = [
+      {
+        username: "Pre-existing user",
+        time: "today",
+        comment: "this is the first comment",
+      },
+      {
+        username: "someone",
+        time: "yesterday",
+        comment: "this is the second comment",
+      },
+    ];
+
     greeceMyth.onclick = () => {
       const mythologyData = {
         img: "imgs/greeceHeroBg.png",
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let reader = new FileReader();
       reader.onload = (e) => {
         let imgUrl = e.target.result;
-        mythologyData.greeceTimeline.push({
+        mythologyData.chosenMyth.push({
           year: newPstYear.value,
           title: newPstTitle.value,
           description: newPstDesc.value,
